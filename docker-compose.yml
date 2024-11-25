@@ -1,0 +1,14 @@
+
+services:
+  asesorias-microservice:
+    container_name: asesorias-microservice
+    image: asesorias-microservice:v1
+    build:
+      context: .
+    ports:
+      - "3001:3001"
+    networks:
+      - asesorias-network
+
+networks:
+  asesorias-network:
