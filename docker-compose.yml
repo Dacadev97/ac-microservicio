@@ -6,9 +6,29 @@ services:
     build:
       context: .
     ports:
-      - "3001:3001"
+      - "3001"
     networks:
       - asesorias-network
+
+asesorias-microservice-2:
+    container_name: asesorias-microservice-2
+    image: asesorias-microservice-2:v1
+    build:
+      context: .
+    ports:
+      - "3001"
+    networks:
+      - asesorias-network
+
+load-balancer :
+    container_name: load-balancer
+    image: load-balancer:v1
+    build:
+      context: ./balancer
+    ports:
+      - "5000:80"
+    networks:
+      - asesorias-network 
 
 networks:
   asesorias-network:
