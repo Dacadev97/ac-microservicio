@@ -27,17 +27,5 @@ services:
     networks:
       - asesorias-network
 
-  jenkins:
-    build:
-      context: ./jenkins
-    container_name: jenkins-nodejs
-    ports:
-      - "8080:8080"
-    volumes:
-      - jenkins_home:/var/jenkins_home
-
-volumes:
-  jenkins_home:
-
 networks:
   asesorias-network:
