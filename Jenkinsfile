@@ -52,6 +52,7 @@ pipeline {
                 subject: "Pipeline ${currentBuild.currentResult}",
                 body: "Se ha completado el pipeline con el resultado: ${currentBuild.currentResult}",
                 to: "daka.alvarez240412@gmail.com",
+                
                 from: "davidson.cadavid@est.iudigital.edu.co"
             )
         }
